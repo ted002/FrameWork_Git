@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Client.h"
+#include "MainApp.h"
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -41,6 +42,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 	msg.message = WM_NULL;
     // 기본 메시지 루프입니다.
+
+	CMainApp* pMainApp = CMainApp::Create();
+	if (nullptr == pMainApp)
+		return FALSE;
 	while (WM_QUIT != msg.message)
 	{
 		if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
@@ -48,7 +53,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
-
+		pMainApp->Update_MainApp();
 
 
 	}

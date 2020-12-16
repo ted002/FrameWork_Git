@@ -4,9 +4,18 @@
 
 class CMainApp final
 {
-public:
+private:
 	explicit CMainApp();
 	virtual ~CMainApp();
+
+public:
+	HRESULT Ready_MainApp();
+	int		Update_MainApp();
+	void	Late_Update_MainApp();
+
+public:
+	static CMainApp* Create();
+
 
 };
 
