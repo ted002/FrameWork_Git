@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "..\Headers\MainApp.h"
+#include "MainApp.h"
 
 
 CMainApp::CMainApp()
