@@ -17,16 +17,8 @@
 #include <memory.h>
 #include <tchar.h>
 
-#include <d3d9.h>
-#pragma comment(lib,"d3d9.lib")
-
-#include <d3dx9.h>
-#pragma comment(lib, "d3dx9.lib")
-
-
-
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
-#include "Client_Define.h"
+
 #include "Extern.h"
-#include "Graphic_Device.h"
-#pragma comment(lib,"../../Engine/Bin/Engine.lib")
+
+#include "Client_Define.h"

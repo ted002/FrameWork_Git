@@ -166,14 +166,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Codes\Base.cpp" />
     <ClCompile Include="..\Codes\Graphic_Device.cpp" />
+    <ClCompile Include="..\Codes\Management.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Headers\Base.h" />
     <ClInclude Include="..\Headers\Engine_Define.h" />
     <ClInclude Include="..\Headers\Engine_Function.h" />
     <ClInclude Include="..\Headers\Engine_Include.h" />
     <ClInclude Include="..\Headers\Engine_Struct.h" />
+    <ClInclude Include="..\Headers\Engine_Typedef.h" />
     <ClInclude Include="..\Headers\Graphic_Device.h" />
+    <ClInclude Include="..\Headers\Management.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

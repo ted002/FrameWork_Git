@@ -58,9 +58,4 @@
       <Filter>99.Defaults</Filter>
     </ResourceCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt">
-      <Filter>99.Defaults</Filter>
-    </Text>
-  </ItemGroup>
 </Project>

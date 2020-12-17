@@ -1,4 +1,7 @@
-﻿  Graphic_Device.cpp
+﻿  Management.cpp
+  Graphic_Device.cpp
+  Base.cpp
+  코드를 생성하고 있습니다...
      ../Bin/Engine.lib 라이브러리 및 ../Bin/Engine.exp 개체를 생성하고 있습니다.
-  Engine.vcxproj -> C:\Users\ted00\Desktop\수업연습폴더\FrameWork_Git\Engine\Includes\../Bin/Engine.dll
+  Engine.vcxproj -> C:\Users\ted00\Desktop\수업연습폴더\Engine\Includes\../Bin/Engine.dll
   Engine.vcxproj -> ../Bin/Engine.pdb (Full PDB)

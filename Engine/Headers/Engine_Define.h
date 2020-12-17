@@ -2,8 +2,19 @@
 #ifndef __ENGINE_DEFINE_H__
 #define __ENGINE_DEFINE_H__
 
+#ifdef ENGINE_EXPORTS
+#define ENGINE_DLL _declspec(dllexport)
+#else
+#define ENGINE_DLL _declspec(dllimport)
+#endif
+
 #define PRINT_LOG(Caption, Message)	\
 ::MessageBox(0, Message, Caption, MB_OK)
+
+#define BEGIN(Name) namespace Name {
+#define END }
+
+#define USING(Name) using namespace Name;
 
 #define NO_COPY(ClassName)							\
 ClassName(const ClassName&)	= delete;				\
@@ -13,7 +24,7 @@ ClassName& operator=(const ClassName&) = delete;
 		NO_COPY(ClassName)						\
 public:											\
 	static ClassName* Get_Instance();			\
-	static void Destroy_Instance();				\
+	static _uint ClassName::Destroy_Instance();	\
 private:										\
 	static ClassName* m_pInstance;
 
@@ -25,13 +36,15 @@ ClassName* ClassName::Get_Instance()			\
 		m_pInstance = new ClassName;			\
 	return m_pInstance;							\
 }												\
-void ClassName::Destroy_Instance()				\
+_uint ClassName::Destroy_Instance()				\
 {												\
+	_uint iRefCount = 0;						\
 	if (m_pInstance)							\
 	{											\
-		delete m_pInstance;						\
-		m_pInstance = nullptr;					\
+	iRefCount = m_pInstance->Release();			\
 	}											\
+	return iRefCount;							\
 }
 
-#endif // !__ENGINE_DEFINE_H__
+#define __ENGINE_DEFINE_H__
+#endif

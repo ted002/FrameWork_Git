@@ -2,24 +2,25 @@
 #ifndef __MAINAPP_H__
 #define __MAINAPP_H__
 
-class CMainApp final
+#include "Base.h"
+USING(Engine)
+class CMainApp final : public CBase
 {
 private:
-	explicit CMainApp();
-	virtual ~CMainApp();
-
+	CMainApp();
+	virtual ~CMainApp() = default;
 
 public:
 	HRESULT Ready_MainApp();
-	int		Update_MainApp();
-	void	Late_Update_MainApp();
-	void	Render_MainApp();
-
+	int Update_MainApp();
+	void Late_Update_MainApp();
+	void Render_MainApp();
 
 public:
-	static CMainApp * Create();
-
-
+	virtual void Free() override;
+	
+public:
+	static CMainApp* Create();
 };
 
 #endif // !__MAINAPP_H__

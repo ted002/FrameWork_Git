@@ -1,15 +1,10 @@
-#define DLL_EXPORT
 #include "Graphic_Device.h"
 
+USING(Engine)
 IMPLEMENT_SINGLETON(CGraphic_Device)
 
 CGraphic_Device::CGraphic_Device()
 {
-}
-
-CGraphic_Device::~CGraphic_Device()
-{
-	Release_Graphic_Device();
 }
 
 HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, int iWinCX, int iWinCY, EDisplayMode eDisplayMode)
@@ -27,6 +22,7 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, int iWinCX, int iWinCY,
 	/*
 	여기에서 한개를 더 조사를 해야하는데 버텍스 프로세싱이라는걸 하드웨어에서 할수 있는지를 조사를 해야한다.
 	정점변환 + 조명연산 = 버텍스 프로세싱
+
 	*/
 	DWORD vp = 0;
 	if (DeviceCaps.DevCaps & D3DCREATE_HARDWARE_VERTEXPROCESSING)
@@ -63,14 +59,6 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, int iWinCX, int iWinCY,
 	return S_OK;
 }
 
-void CGraphic_Device::Release_Graphic_Device()
-{
-	if (m_pDevice)
-		m_pDevice->Release();
-	if (m_pSDK)
-		m_pSDK->Release();
-}
-
 void CGraphic_Device::Render_Begin()
 {
 	// 랜더링 되는 과정은 1. 지운다. 2. 그리기 시작한다. 3. 다그린다.4.시연한다. 
@@ -83,4 +71,12 @@ void CGraphic_Device::Render_End(HWND hWND /*= nullptr*/)
 {
 	m_pDevice->EndScene();
 	m_pDevice->Present(nullptr, nullptr, hWND, nullptr);
+}
+
+void CGraphic_Device::Free()
+{
+	if (m_pDevice)
+		m_pDevice->Release();
+	if (m_pSDK)
+		m_pSDK->Release();
 }

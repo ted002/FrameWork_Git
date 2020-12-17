@@ -7,10 +7,10 @@
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
+HWND g_hWND;
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
-HWND g_hWND;
 
 // 이 코드 모듈에 들어 있는 함수의 정방향 선언입니다.
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -42,11 +42,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 	msg.message = WM_NULL;
-    // 기본 메시지 루프입니다.
 
 	CMainApp* pMainApp = CMainApp::Create();
 	if (nullptr == pMainApp)
 		return FALSE;
+
+    // 기본 메시지 루프입니다.
 	while (WM_QUIT != msg.message)
 	{
 		if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
@@ -103,6 +104,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
+
    RECT rcWindow = { 0,0,WINCX,WINCY };
    AdjustWindowRect(&rcWindow, WS_OVERLAPPEDWINDOW,FALSE);
 
