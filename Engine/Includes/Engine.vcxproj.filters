@@ -13,6 +13,9 @@
     <Filter Include="Headers">
       <UniqueIdentifier>{3ac9f60c-251c-4d6d-9e7b-06cdf871cb24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="00.Systems\99.DLLRISE">
+      <UniqueIdentifier>{2ccf21ac-3a06-4ca1-8fbb-1c5c00b6028a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\Graphic_Device.cpp">

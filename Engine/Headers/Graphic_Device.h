@@ -2,13 +2,22 @@
 #ifndef __GRAPHIC_DEVICE_H__
 #define __GRAPHIC_DEVICE_H__
 
+#ifdef DLL_EXPORT
+#define DLL_DECLSPEC __declspec(dllexport)
+
+#else
+#define DLL_DECLSPEC __declspec(dllimport)
+
+#endif // DLL_EXPORT
+
 #include "Engine_Include.h"
-enum class EDisplayMode
+
+enum class DLL_DECLSPEC EDisplayMode
 {
 	FULL,
 	WIN
 };
-class CGraphic_Device final
+class DLL_DECLSPEC CGraphic_Device final
 {
 	DECLARE_SINGLETON(CGraphic_Device)
 

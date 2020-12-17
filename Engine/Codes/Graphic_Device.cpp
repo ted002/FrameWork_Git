@@ -1,3 +1,4 @@
+#define DLL_EXPORT
 #include "Graphic_Device.h"
 
 IMPLEMENT_SINGLETON(CGraphic_Device)
@@ -5,7 +6,6 @@ IMPLEMENT_SINGLETON(CGraphic_Device)
 CGraphic_Device::CGraphic_Device()
 {
 }
-
 
 CGraphic_Device::~CGraphic_Device()
 {
@@ -27,7 +27,6 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, int iWinCX, int iWinCY,
 	/*
 	여기에서 한개를 더 조사를 해야하는데 버텍스 프로세싱이라는걸 하드웨어에서 할수 있는지를 조사를 해야한다.
 	정점변환 + 조명연산 = 버텍스 프로세싱
-
 	*/
 	DWORD vp = 0;
 	if (DeviceCaps.DevCaps & D3DCREATE_HARDWARE_VERTEXPROCESSING)

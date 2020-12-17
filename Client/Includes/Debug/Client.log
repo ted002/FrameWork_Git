@@ -2,4 +2,5 @@
   Client.cpp
   MainApp.cpp
   코드를 생성하고 있습니다...
-LINK : fatal error LNK1104: '../../Engine/Bin/Engine.dll' 파일을 열 수 없습니다.
+  Client.vcxproj -> C:\Users\ted00\Desktop\수업연습폴더\FrameWork_Git\Client\Includes\../Bin/Client.exe
+  Client.vcxproj -> ../Bin/Client.pdb (Full PDB)

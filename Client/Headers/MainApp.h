@@ -8,13 +8,16 @@ private:
 	explicit CMainApp();
 	virtual ~CMainApp();
 
+
 public:
 	HRESULT Ready_MainApp();
 	int		Update_MainApp();
 	void	Late_Update_MainApp();
+	void	Render_MainApp();
+
 
 public:
-	static CMainApp* Create();
+	static CMainApp * Create();
 
 
 };

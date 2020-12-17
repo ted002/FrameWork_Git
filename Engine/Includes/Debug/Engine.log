@@ -1,12 +1,4 @@
 ﻿  Graphic_Device.cpp
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\codes\graphic_device.cpp(17): warning C4273: 'CGraphic_Device::Ready_Graphic_Device': dll 링크가 일치하지 않습니다.
-  c:\users\ted00\desktop\수업연습폴더\framework_git\engine\headers\graphic_device.h(23): note: 'Ready_Graphic_Device'의 이전 정의를 참조하십시오.
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\codes\graphic_device.cpp(70): warning C4273: 'CGraphic_Device::Release_Graphic_Device': dll 링크가 일치하지 않습니다.
-  c:\users\ted00\desktop\수업연습폴더\framework_git\engine\headers\graphic_device.h(25): note: 'Release_Graphic_Device'의 이전 정의를 참조하십시오.
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\codes\graphic_device.cpp(79): warning C4273: 'CGraphic_Device::Render_Begin': dll 링크가 일치하지 않습니다.
-  c:\users\ted00\desktop\수업연습폴더\framework_git\engine\headers\graphic_device.h(28): note: 'Render_Begin'의 이전 정의를 참조하십시오.
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\codes\graphic_device.cpp(88): warning C4273: 'CGraphic_Device::Render_End': dll 링크가 일치하지 않습니다.
-  c:\users\ted00\desktop\수업연습폴더\framework_git\engine\headers\graphic_device.h(30): note: 'Render_End'의 이전 정의를 참조하십시오.
      ../Bin/Engine.lib 라이브러리 및 ../Bin/Engine.exp 개체를 생성하고 있습니다.
   Engine.vcxproj -> C:\Users\ted00\Desktop\수업연습폴더\FrameWork_Git\Engine\Includes\../Bin/Engine.dll
   Engine.vcxproj -> ../Bin/Engine.pdb (Full PDB)
