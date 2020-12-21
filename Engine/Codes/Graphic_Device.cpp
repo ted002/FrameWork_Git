@@ -59,24 +59,11 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, int iWinCX, int iWinCY,
 	return S_OK;
 }
 
-void CGraphic_Device::Render_Begin()
-{
-	// 랜더링 되는 과정은 1. 지운다. 2. 그리기 시작한다. 3. 다그린다.4.시연한다. 
-	m_pDevice->Clear(0, nullptr, D3DCLEAR_STENCIL | D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER,
-		D3DCOLOR_ARGB(255, 0, 0, 255), 1.f, 0);
-	m_pDevice->BeginScene();
-}
-
-void CGraphic_Device::Render_End(HWND hWND /*= nullptr*/)
-{
-	m_pDevice->EndScene();
-	m_pDevice->Present(nullptr, nullptr, hWND, nullptr);
-}
-
 void CGraphic_Device::Free()
 {
-	if (m_pDevice)
-		m_pDevice->Release();
-	if (m_pSDK)
-		m_pSDK->Release();
+	if (Safe_Release(m_pDevice))
+		PRINT_LOG(L"Warning", L"Failed To Release LPDIRECT3DDEVICE9");
+
+	if (Safe_Release(m_pSDK))
+		PRINT_LOG(L"Warning", L"Failed To Release LPDIRECT3D9");
 }

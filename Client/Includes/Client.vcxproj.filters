@@ -10,6 +10,18 @@
     <Filter Include="98.Headers">
       <UniqueIdentifier>{9cce2a64-2d18-4cb8-8665-da39cdde8545}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98.Headers\Total">
+      <UniqueIdentifier>{506682d4-2530-4832-bcf5-5925d4dc18c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Scene">
+      <UniqueIdentifier>{e896aad9-6d6e-4a02-a135-7b8c003e4459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Scene\00.Logo">
+      <UniqueIdentifier>{735e9c1a-a7f1-4836-83fc-3899a8d89061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Scene\01.Stage">
+      <UniqueIdentifier>{e5c0b6b4-0b64-496d-9f8b-d93acfbe8f67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -24,14 +36,26 @@
     <ClInclude Include="targetver.h">
       <Filter>99.Defaults</Filter>
     </ClInclude>
-    <ClInclude Include="..\Headers\Client_Define.h">
-      <Filter>98.Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\Headers\MainApp.h">
       <Filter>00.MainApp</Filter>
     </ClInclude>
-    <ClInclude Include="..\Headers\Extern.h">
+    <ClInclude Include="..\Headers\Client_Total.h">
       <Filter>98.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Client_Define.h">
+      <Filter>98.Headers\Total</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Client_Enum.h">
+      <Filter>98.Headers\Total</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Client_Extern.h">
+      <Filter>98.Headers\Total</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Logo.h">
+      <Filter>01.Scene\00.Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Stage.h">
+      <Filter>01.Scene\01.Stage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +67,12 @@
     </ClCompile>
     <ClCompile Include="..\Codes\MainApp.cpp">
       <Filter>00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Logo.cpp">
+      <Filter>01.Scene\00.Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Stage.cpp">
+      <Filter>01.Scene\01.Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

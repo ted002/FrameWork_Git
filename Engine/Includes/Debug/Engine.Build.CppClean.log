@@ -1,10 +1,15 @@
 c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\vc140.pdb
 c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\vc140.idb
 c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\base.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\component.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\componentmgr.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\gameobj.obj
 c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\graphic_device.obj
 c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\management.obj
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\bin\engine.lib
-c:\users\ted00\desktop\수업연습폴더\framework_git\engine\bin\engine.exp
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\renderer.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\scene.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\scenemgr.obj
+c:\users\ted00\desktop\수업연습폴더\engine\includes\debug\keymgr.obj
 c:\users\ted00\desktop\수업연습폴더\engine\bin\engine.lib
 c:\users\ted00\desktop\수업연습폴더\engine\bin\engine.exp
 c:\users\ted00\desktop\수업연습폴더\engine\bin\engine.ilk

@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "MainApp.h"
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -60,7 +61,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		pMainApp->Render_MainApp();
 
 	}
-    return (int) msg.wParam;
+	if (Safe_Release(pMainApp))
+		PRINT_LOG(L"Warning,", L"Failed To release MainApp");
+	
+	CManagement::Release_Engine();
+
+	return (int) msg.wParam;
 }
 
 

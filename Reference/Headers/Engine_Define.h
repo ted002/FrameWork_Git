@@ -1,7 +1,6 @@
 #pragma once
 #ifndef __ENGINE_DEFINE_H__
-#define __ENGINE_DEFINE_H__
-
+#define __ENGINE_DEFINE_H__	
 #ifdef ENGINE_EXPORTS
 #define ENGINE_DLL _declspec(dllexport)
 #else
@@ -13,6 +12,7 @@
 
 #define BEGIN(Name) namespace Name {
 #define END }
+#define VK_MAX 0xFF
 
 #define USING(Name) using namespace Name;
 
@@ -46,5 +46,4 @@ _uint ClassName::Destroy_Instance()				\
 	return iRefCount;							\
 }
 
-#define __ENGINE_DEFINE_H__
 #endif

@@ -19,6 +19,27 @@
     <Filter Include="01.Utilities\99.BaseClass">
       <UniqueIdentifier>{c1788b21-bbe9-408e-9fa5-bc3bd209043c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Utilities\01.Renderer">
+      <UniqueIdentifier>{7f42c053-507c-49ef-af39-eb246bdf4898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\02.Scene">
+      <UniqueIdentifier>{45f53ad9-9072-497f-818c-516c56a4cdc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\02.Scene\SceneMgr">
+      <UniqueIdentifier>{3ce43e32-437f-47e0-8121-effc91e32514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\03.Component">
+      <UniqueIdentifier>{5f5fd0e5-59a8-4426-ac79-85adc722519e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\03.Component\Manager">
+      <UniqueIdentifier>{b8589435-7b69-442c-b612-5b0c9c61346d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\04.GameObj">
+      <UniqueIdentifier>{8ebbc214-2bc1-4678-80dd-9903e696a94e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utilities\KeyMgr">
+      <UniqueIdentifier>{0a4f56a4-4bfb-487f-95ba-fbce5bbd9ef9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codes\Graphic_Device.cpp">
@@ -29,6 +50,27 @@
     </ClCompile>
     <ClCompile Include="..\Codes\Management.cpp">
       <Filter>01.Utilities\00.Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Renderer.cpp">
+      <Filter>01.Utilities\01.Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Scene.cpp">
+      <Filter>01.Utilities\02.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\SceneMgr.cpp">
+      <Filter>01.Utilities\02.Scene\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\Component.cpp">
+      <Filter>01.Utilities\03.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\ComponentMgr.cpp">
+      <Filter>01.Utilities\03.Component\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\GameObj.cpp">
+      <Filter>01.Utilities\04.GameObj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codes\KeyMgr.cpp">
+      <Filter>01.Utilities\KeyMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +97,27 @@
     </ClInclude>
     <ClInclude Include="..\Headers\Management.h">
       <Filter>01.Utilities\00.Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Renderer.h">
+      <Filter>01.Utilities\01.Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Scene.h">
+      <Filter>01.Utilities\02.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\SceneMgr.h">
+      <Filter>01.Utilities\02.Scene\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\Component.h">
+      <Filter>01.Utilities\03.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\ComponentMgr.h">
+      <Filter>01.Utilities\03.Component\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\GameObj.h">
+      <Filter>01.Utilities\04.GameObj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Headers\KeyMgr.h">
+      <Filter>01.Utilities\KeyMgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
